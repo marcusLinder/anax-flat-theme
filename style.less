@@ -1,21 +1,70 @@
-/** 
+/**
 * Anax Flat theme.
 */
 @import url(modules.less);
 
-
-
 /** --------------------------------------------------------------
- *  Logo images
+ *  Almänt
  */
-.logo-1 {
-    position: absolute;
-    top: 70px;
-    left: -140px;
+img {
+    max-width: 100%;
 }
 
-.site-logo-text-icon {
-    img {
-        vertical-align: bottom;
+a {
+    color: black;
+}
+
+/** --------------------------------------------------------------
+ *  Byline
+ */
+.inner-wrap {
+    padding-top: 10px;
+}
+
+/** --------------------------------------------------------------
+ *  Responsiv stil
+ */
+@media screen and (max-width: 900px) {
+    .site-logo-text {
+        width: 40%;
+    }
+
+    .navbar2 {
+        width: 50%;
+    }
+
+    .profile {
+        width: 10%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .site-logo-text {
+        width: 90%;
+    }
+
+    .navbar2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .footer-column {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar li {
+        display: inline-block;
+    }
+
+    .sidebar a {
+        padding-left: 5px;
     }
 }
