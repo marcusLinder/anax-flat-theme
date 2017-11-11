@@ -1,4 +1,22 @@
 /** --------------------------------------------------------------
+ *  vgrid och hgrid på godtycklig sida
+ */
+
+html.vgrid .inner-wrap {
+    @gridImage: "../img/grid/grid940x12x60x20-nomargin.png";
+    #vgrid .showGrid(1100px, @gridImage);
+
+    &.inner-wrap-header {
+        #vgrid .showGrid(100%, @gridImage);
+    }
+}
+
+html.hgrid .inner-wrap {
+    @gridImage: "../img/grid/horisontal-grid-24.png";
+    #hgrid .showGrid(@gridImage);
+}
+
+/** --------------------------------------------------------------
  *  Typografi
  */
 

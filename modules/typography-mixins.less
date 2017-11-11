@@ -1,6 +1,13 @@
 /**
  * Typographic mixins.
  */
+
+//Visar hgrid på godtycklig sida
+ #hgrid {
+    .showGrid(@gridImage) {
+        background-image: url("@{gridImage}");
+}
+}
  .font(@fontSize: @fontSize, @fontFamily: @fontFamilyBody) {
      font: @fontSize/@lineHeight @fontFamily;
  }

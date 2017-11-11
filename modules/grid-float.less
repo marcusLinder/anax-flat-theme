@@ -26,7 +26,38 @@
     }
 }
 
+/**
+ * Visar vgrid på godtycklig sida
+ */
+ #vgrid {
 
+     // Utility variable, you should never need to modify this
+     @gridSystemWidth: @columns * (@columnWidth + @gutterWidth) * 1px;
+
+     // Use % for fluid layout
+     //@totalWidth: 100% / @gridSystemWidth;
+
+     /**
+      * Wrap grid in a container /?vgrid.
+      */
+     .grid(@maxWidth) {
+         margin-right: auto;
+         margin-left: auto;
+         max-width: @maxWidth;
+     }
+
+     /**
+      * Show /?grid.
+      */
+     .showGrid(@maxWidth, @gridImage) {
+         background: url("@{gridImage}") repeat-y fixed center center;
+         background-size: 100% auto;
+
+         @media (min-width: @maxWidth) {
+             background-size: @maxWidth auto;
+         }
+ }
+}
 
 /**
  * Wrap grid in a container.
