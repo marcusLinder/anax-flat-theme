@@ -1,0 +1,101 @@
+@import url(light.less);
+
+@textColor: #c4071a;
+@bgColor: #0392CE;
+@textColor2: #6E6E6E;
+@bgColorMain: @bgColor;
+@linkColor: #c4071a;
+@HeaderBgColor: #FFFE34;
+@HeaderLinkColor: @bgColor;
+@navbarColor: @textColor;
+@bgNavbarColor: @HeaderBgColor;
+@navbarHoverColor: @textColor;
+@bgNavbarHoverColor: @bgColor;
+@navbarActiveColor: @textColor;
+@bgNavbarActiveColor: @bgColor;
+
+@breadcrumbColor: @textColor;
+@bgBreadcrumbColor: #FFFE34;
+
+@footerColor: @textColor;
+@bgFooterColor: #FFFE34;
+
+/** --------------------------------------------------------------
+ *  Allmäna css regler
+ */
+
+body {
+    color: @textColor;
+    background-color: @bgColor;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, ul, tr, td {
+    color: @textColor;
+}
+
+a {
+    text-decoration: underline;
+}
+
+.byline {
+    color: @textColor;
+    border-color: @HeaderBgColor;
+    }
+
+/** --------------------------------------------------------------
+ *  Header
+ */
+.site-header {
+    background-color: @bgNavbarColor;
+    @maxButtonColor: @HeaderBgColor;
+    @maxBgColor: @bgNavbarColor;
+
+a, a:hover {
+    color: @HeaderLinkColor;
+    text-decoration: none;
+    }
+}
+
+.rm-desktop {
+    li {
+
+        a {
+            color: @bgColor;
+            background-color: @bgNavbarColor;
+
+            &:hover {
+                color: @navbarHoverColor;
+                background-color: @bgNavbarHoverColor;
+            }
+        }
+    }
+    li.selected, li.selected-parent {
+        a, a:hover {
+            color: @navbarActiveColor;
+            background-color: @bgNavbarActiveColor;
+        }
+    }
+}
+
+.rm-mobile a {
+    color: @bgColor;
+}
+
+/** --------------------------------------------------------------
+ *  Breadcrumb
+ */
+.breadcrumb-wrap {
+    color: @breadcrumbColor;
+    background-color: @bgBreadcrumbColor;
+}
+
+/** --------------------------------------------------------------
+ *  Footer
+ */
+.inner-wrap-footer {
+    background-color: @bgFooterColor;
+}
+
+.outer-wrap-footer a{
+    color: @linkColor;
+}

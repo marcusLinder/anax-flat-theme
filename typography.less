@@ -1,0 +1,104 @@
+@import url(light.less);
+
+/** --------------------------------------------------------------
+ *  Typografi
+ */
+
+@fontFamilyHeadings:  @fontFamilyCourgette;
+@fontFamilyTitle:     @fontFamilyLobster;
+@fontFamilyMenuBar:   @fontFamilyNotoSerif;
+@fontFamilyBody:      @fontFamilyArial;
+
+@fontSizeBreadcrumb:    14px;
+
+@colorH1BorderBottom: @textColor2;
+@colorH2BorderBottom: @textColor2;
+
+h1 {
+    border-bottom: @borderSizeH1 solid @colorH1BorderBottom;
+}
+
+h2 {
+    border-bottom: @borderSizeH1 solid @colorH2BorderBottom;
+}
+
+.route-analysis-colorscheme {
+    h4 {
+        text-decoration: underline;
+    }
+}
+
+/** --------------------------------------------------------------
+ *  Allmäna css regler
+ */
+
+a {
+    text-decoration: underline;
+}
+
+.byline {
+    font-family: @fontFamilyBody;
+}
+
+li {
+    list-style-type: circle;
+}
+
+/** --------------------------------------------------------------
+ *  Header
+ */
+
+.outer-wrap-header li {
+    list-style-type: none;
+}
+
+.site-logo-text {
+    font-family: @fontFamilyTitle;
+}
+
+.rm-desktop {
+    li {
+        font-size: @fontSizeTopMenu;
+        font-family: @fontFamilyMenuBar;
+        a {
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    li.selected, li.selected-parent {
+        a, a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.rm-mobile a {
+    font-family: @fontFamilyMenuBar;
+}
+
+/** --------------------------------------------------------------
+ *  Breadcrumb
+ */
+
+.breadcrumb-list ul {
+    font-size: @fontSizeBreadcrumb;
+    font-family: @fontFamilyBody;
+    li{
+        display: inline-block;
+        &::after {
+            content: " ›";
+        }
+        &:last-child::after {
+            display: none;
+        }
+    }
+}
+
+/** --------------------------------------------------------------
+ *  Footer
+ */
+
+ .footer-column h4 {
+     text-decoration: none;
+ }

@@ -3,12 +3,13 @@
  */
 
 //Visar hgrid på godtycklig sida
- #hgrid {
+#hgrid {
     .showGrid(@gridImage) {
-        background-image: url("@{gridImage}");
+    background-image: url("@{gridImage}");
 }
 }
- .font(@fontSize: @fontSize, @fontFamily: @fontFamilyBody) {
+
+.font(@fontSize: @fontSize, @fontFamily: @fontFamilyBody) {
      font: @fontSize/@lineHeight @fontFamily;
  }
 

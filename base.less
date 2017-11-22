@@ -1,0 +1,244 @@
+@import url(modules.less);
+
+/**
+ * Variabler för färger
+ */
+@textColor: #000;
+@bgColor: #fff;
+@bgColorMain: @bgColor;
+@linkColor: #000;
+@HeaderBgColor: @bgColor;
+@HeaderLinkColor: @textColor;
+@navbarColor: @textColor;
+@bgNavbarColor: @HeaderBgColor;
+@navbarHoverColor: @textColor;
+@bgNavbarHoverColor: @bgColor;
+@navbarActiveColor: @bgColor;
+@bgNavbarActiveColor: @textColor;
+@menuCloseColor: @textColor;
+@bgMenuColor: @bgColor;
+@menuitemColor: @textColor;
+@bgMenuitemColor: @bgColor;
+@menuitemActiveColor: @bgColor;
+@bgMenuitemActiveColor: @textColor;
+@breadcrumbColor: @textColor;
+@bgBreadcrumbColor: @bgColor;
+@footerColor: @textColor;
+@bgFooterColor: @bgColor;
+
+
+/** --------------------------------------------------------------
+ *  Visar grid
+ */
+.route-grid .inner-wrap {
+    .container();
+    .showGrid(960px);
+}
+
+html.vgrid .inner-wrap {
+    .showGrid(960px);
+}
+
+.route-typography .outer-wrap {
+    .showTypographyGrid();
+}
+
+html.hgrid .inner-wrap {
+    .showTypographyGrid();
+}
+
+
+/** --------------------------------------------------------------
+ *  Allmäna css regler
+ */
+html {
+    font-size: @fontSizeBody;
+}
+
+body {
+    color: @textColor;
+    background-color: @bgColor;
+    overflow-y: scroll;
+}
+
+.byline {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: solid;
+    }
+
+a {
+    color: @linkColor;
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+}
+
+.next {
+    float: right;
+}
+
+/** --------------------------------------------------------------
+ *  Header
+ */
+.site-header {
+    height: 70px;
+    padding-top: 10px;
+    background-color: @bgNavbarColor;
+
+a, a:hover {
+    color: @HeaderLinkColor;
+    text-decoration: none;
+    }
+}
+
+@maxButtonFontSize: 2em;
+@maxBgColor: @bgColor;
+
+.site-logo-text {
+    float: left;
+    font-size: 35px;
+    text-decoration: none;
+}
+
+.navbar2 a:hover {
+    text-decoration: none;
+}
+
+.rm-desktop {
+    li {
+        font-size: @fontSizeTopMenu;
+
+        a {
+            color: @navbarColor;
+            background-color: @bgNavbarColor;
+
+            &:hover {
+                color: @navbarHoverColor;
+                background-color: @bgNavbarHoverColor;
+                text-decoration: none;
+            }
+        }
+    }
+    li.selected, li.selected-parent {
+        a, a:hover {
+            color: @navbarActiveColor;
+            background-color: @bgNavbarActiveColor;
+            text-decoration: none;
+        }
+    }
+}
+
+
+/** --------------------------------------------------------------
+ *  Logo images
+ */
+.logo-1 {
+    position: absolute;
+    top: 70px;
+    left: -140px;
+}
+
+.site-logo-text-icon {
+    img {
+        vertical-align: bottom;
+    }
+}
+
+/** --------------------------------------------------------------
+ *  Footer
+ */
+ .site-footer {
+     text-align: center;
+     li {
+         display: inline-block;
+     }
+ }
+
+.inner-wrap-footer {
+    background-color: @bgFooterColor;
+}
+
+.footer-column {
+    text-align: center;
+}
+
+/** --------------------------------------------------------------
+ *  Breadcrumb
+ */
+.breadcrumb-wrap {
+    color: @breadcrumbColor;
+    background-color: @bgBreadcrumbColor;
+}
+
+.breadcrumb-list ul a{
+    text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+}
+
+/** --------------------------------------------------------------
+ *  Responsiv stil
+ */
+@media screen and (max-width: 900px) {
+    .site-logo-text {
+        width: 40%;
+    }
+
+    .navbar2 {
+        width: 50%;
+    }
+
+    .profile {
+        width: 10%;
+    }
+}
+
+@media screen and (max-width: 904px) {
+    .navbar2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .site-logo-text {
+        width: 90%;
+    }
+
+    .navbar2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .footer-column {
+        width: 100%;
+    }
+
+    .navbar2 {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+    .navbar2 {
+        display: none;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar li {
+        display: inline-block;
+    }
+
+    .sidebar a {
+        padding-left: 5px;
+    }
+}

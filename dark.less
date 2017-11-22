@@ -1,0 +1,115 @@
+@import url(base.less);
+
+@textColor: #fff;
+@bgColor: #000;
+@textColor2: #6E6E6E;
+@bgColorMain: @bgColor;
+@linkColor: #fff;
+@HeaderBgColor: #000;
+@HeaderLinkColor: @textColor;
+@navbarColor: #32CD32;
+@bgNavbarColor: @HeaderBgColor;
+@navbarHoverColor: #bc0b17;
+@bgNavbarHoverColor: @bgColor;
+@navbarActiveColor: @textColor;
+@bgNavbarActiveColor: @bgColor;
+
+@breadcrumbColor: @textColor;
+@bgBreadcrumbColor: @bgColor;
+
+@footerColor: @textColor;
+@bgFooterColor: @bgColor;
+
+/** --------------------------------------------------------------
+ *  Allmäna css regler
+ */
+ .route-grid .inner-wrap {
+     background-color: white;
+ }
+
+.route-typography .outer-wrap {
+    background-color: @bgColor;
+}
+
+html {
+    font-size: @fontSizeBody;
+}
+
+body {
+    color: @textColor;
+    background-color: @bgColor;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, ul, tr, td {
+    color: @textColor2;
+}
+
+a {
+    text-decoration: underline;
+}
+
+a:hover {
+    color: @navbarHoverColor;
+}
+
+.byline {
+    color: @textColor2;
+    }
+
+/** --------------------------------------------------------------
+ *  Header
+ */
+.site-header {
+    background-color: @bgNavbarColor;
+
+a, a:hover {
+    color: @navbarColor;
+    text-decoration: none;
+    }
+}
+
+.rm-desktop {
+    li {
+        a {
+            color: @navbarColor;
+            background-color: @bgNavbarColor;
+
+            &:hover {
+                color: @navbarHoverColor;
+                background-color: @bgNavbarHoverColor;
+            }
+        }
+    }
+    li.selected, li.selected-parent {
+        a, a:hover {
+            color: @navbarActiveColor;
+            background-color: @navbarHoverColor;
+        }
+    }
+}
+
+@maxButtonColor: @navbarColor;
+@maxBgColor: @bgColor;
+
+/** --------------------------------------------------------------
+ *  Breadcrumb
+ */
+.breadcrumb-wrap {
+    color: @breadcrumbColor;
+    background-color: @bgBreadcrumbColor;
+}
+
+/** --------------------------------------------------------------
+ *  Footer
+ */
+.inner-wrap-footer {
+    background-color: @bgFooterColor;
+}
+
+.outer-wrap-footer a{
+    color: @textColor2;
+}
+
+.outer-wrap-footer a:hover{
+    color: @navbarHoverColor;
+}

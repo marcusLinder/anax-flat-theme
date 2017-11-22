@@ -1,0 +1,117 @@
+@import url(light.less);
+
+@textColor: #000;
+@bgColor: #FAFAFA;
+@bgColorMain: #999966;
+@linkColor: #000;
+@HeaderBgColor: #ccccb3;
+@HeaderLinkColor: @textColor;
+@navbarColor: @textColor;
+@bgNavbarColor: @HeaderBgColor;
+@navbarHoverColor: @textColor;
+@bgNavbarHoverColor: #a0d6b4;
+@navbarActiveColor: @textColor;
+@bgNavbarActiveColor: #a0d6b4;
+
+@breadcrumbColor: @textColor;
+@bgBreadcrumbColor: #ccccb3;
+
+@footerColor: @textColor;
+@bgFooterColor: #ccccb3;
+@footerHoverColor: #a0d6b4;
+
+/** --------------------------------------------------------------
+ *  Allmäna css regler
+ */
+
+.outer-wrap {
+    background-color: @bgColorMain;
+}
+
+.inner-wrap {
+    color: @textColor;
+    background-color: @bgColor;
+}
+
+.route-typography .outer-wrap .inner-wrap {
+    .showTypographyGrid();
+}
+
+.flash-wrap {
+    background-color: @bgBreadcrumbColor;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, ul, tr, td {
+    color: @textColor;
+}
+
+a {
+    text-decoration: underline;
+}
+
+.byline {
+    color: @textColor;
+    }
+
+/** --------------------------------------------------------------
+ *  Header
+ */
+.site-header {
+    background-color: @bgNavbarColor;
+
+a, a:hover {
+    color: @HeaderLinkColor;
+    text-decoration: none;
+    }
+}
+
+.rm-desktop {
+    li {
+
+        a {
+            color: @textColor;
+            background-color: @bgNavbarColor;
+
+            &:hover {
+                color: @navbarHoverColor;
+                background-color: @bgNavbarHoverColor;
+            }
+        }
+    }
+    li.selected, li.selected-parent {
+        a, a:hover {
+            color: @navbarActiveColor;
+            background-color: @bgNavbarActiveColor;
+        }
+    }
+}
+
+@maxButtonColor: @bgNavbarHoverColor;
+@maxBgColor: @bgNavbarColor;
+
+.rm-mobile a {
+    color: @textColor;
+}
+
+/** --------------------------------------------------------------
+ *  Breadcrumb
+ */
+.breadcrumb-wrap {
+    color: @breadcrumbColor;
+    background-color: @bgBreadcrumbColor;
+}
+
+/** --------------------------------------------------------------
+ *  Footer
+ */
+.inner-wrap-footer {
+    background-color: @bgFooterColor;
+}
+
+.outer-wrap-footer a {
+    color: @textColor;
+}
+
+.outer-wrap-footer a:hover{
+    color: @footerHoverColor;
+}

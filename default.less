@@ -1,0 +1,180 @@
+@import url(light.less);
+
+/** --------------------------------------------------------------
+ *  Färger
+ */
+@textColor: #000;
+@bgColor: #FAFAFA;
+@bgColorMain: #999966;
+@linkColor: #000;
+@HeaderBgColor: #ccccb3;
+@HeaderLinkColor: @textColor;
+@navbarColor: @textColor;
+@bgNavbarColor: @HeaderBgColor;
+@navbarHoverColor: @textColor;
+@bgNavbarHoverColor: #a0d6b4;
+@navbarActiveColor: @textColor;
+@bgNavbarActiveColor: #a0d6b4;
+
+@breadcrumbColor: @textColor;
+@bgBreadcrumbColor: #ccccb3;
+
+@footerColor: @textColor;
+@bgFooterColor: #ccccb3;
+@footerHoverColor: #a0d6b4;
+
+@colorH1BorderBottom: @textColor2;
+@colorH2BorderBottom: @textColor2;
+
+/** --------------------------------------------------------------
+ *  Typografiska regler
+ */
+ @fontFamilyHeadings:  @fontFamilyCourgette;
+ @fontFamilyTitle:     @fontFamilyLobster;
+ @fontFamilyMenuBar:   @fontFamilyNotoSerif;
+ @fontFamilyBody:      @fontFamilyArial;
+ @fontSizeBreadcrumb:    14px;
+
+/** --------------------------------------------------------------
+ *  Allmäna css regler
+ */
+.outer-wrap {
+    background-color: @bgColorMain;
+}
+
+.inner-wrap {
+    color: @textColor;
+    background-color: @bgColor;
+}
+
+.route-typography .outer-wrap .inner-wrap {
+    .showTypographyGrid();
+}
+
+.flash-wrap {
+    background-color: @bgBreadcrumbColor;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, ul, tr, td {
+    color: @textColor;
+}
+
+h1 {
+    border-bottom: @borderSizeH1 solid @colorH1BorderBottom;
+}
+
+h2 {
+    border-bottom: @borderSizeH1 solid @colorH2BorderBottom;
+}
+
+.route-analysis-colorscheme {
+    h4 {
+        text-decoration: underline;
+    }
+}
+
+a {
+    text-decoration: underline;
+}
+
+.byline {
+    color: @textColor;
+    font-family: @fontFamilyBody;
+    }
+
+li {
+    list-style-type: circle;
+}
+
+/** --------------------------------------------------------------
+ *  Header
+ */
+.site-header {
+    background-color: @bgNavbarColor;
+
+a, a:hover {
+    color: @HeaderLinkColor;
+    text-decoration: none;
+    }
+}
+
+.site-logo-text {
+    font-family: @fontFamilyTitle;
+}
+
+.outer-wrap-header li {
+    list-style-type: none;
+}
+
+.rm-desktop {
+    li {
+        font-size: @fontSizeTopMenu;
+        font-family: @fontFamilyMenuBar;
+        a {
+            color: @textColor;
+            background-color: @bgNavbarColor;
+
+            &:hover {
+                color: @navbarHoverColor;
+                background-color: @bgNavbarHoverColor;
+                text-decoration: none;
+            }
+        }
+    }
+    li.selected, li.selected-parent {
+        a, a:hover {
+            color: @navbarActiveColor;
+            background-color: @bgNavbarActiveColor;
+            text-decoration: underline;
+        }
+    }
+}
+
+@maxButtonColor: @bgNavbarHoverColor;
+@maxBgColor: @bgNavbarColor;
+
+.rm-mobile a {
+    color: @textColor;
+    font-family: @fontFamilyMenuBar;
+}
+
+/** --------------------------------------------------------------
+ *  Breadcrumb
+ */
+.breadcrumb-wrap {
+    color: @breadcrumbColor;
+    background-color: @bgBreadcrumbColor;
+}
+
+.breadcrumb-list ul {
+    font-size: @fontSizeBreadcrumb;
+    font-family: @fontFamilyBody;
+    li{
+        display: inline-block;
+        &::after {
+            content: " ›";
+        }
+        &:last-child::after {
+            display: none;
+        }
+    }
+}
+
+/** --------------------------------------------------------------
+ *  Footer
+ */
+.inner-wrap-footer {
+    background-color: @bgFooterColor;
+}
+
+.outer-wrap-footer a {
+    color: @textColor;
+}
+
+.outer-wrap-footer a:hover{
+    color: @footerHoverColor;
+}
+
+ .footer-column h4 {
+     text-decoration: none;
+ }

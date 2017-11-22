@@ -1,0 +1,100 @@
+@import url(base.less);
+
+@textColor: #000;
+@bgColor: #fff;
+@textColor2: #6E6E6E;
+@bgColorMain: @bgColor;
+@linkColor: #000;
+@HeaderBgColor: #FAFAFA;
+@HeaderLinkColor: @textColor;
+@navbarColor: @textColor;
+@bgNavbarColor: @HeaderBgColor;
+@navbarHoverColor: @textColor;
+@bgNavbarHoverColor: @bgColor;
+@navbarActiveColor: @textColor;
+@bgNavbarActiveColor: @bgColor;
+
+@breadcrumbColor: @textColor;
+@bgBreadcrumbColor: #FAFAFA;
+
+@footerColor: @textColor;
+@bgFooterColor: #FAFAFA;
+
+/** --------------------------------------------------------------
+ *  Allmäna css regler
+ */
+
+body {
+    color: @textColor;
+    background-color: @bgColor;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, ul, tr, td {
+    color: @textColor2;
+}
+
+a {
+    text-decoration: underline;
+}
+
+.byline {
+    color: @textColor2;
+    }
+
+/** --------------------------------------------------------------
+ *  Header
+ */
+.site-header {
+    background-color: @bgNavbarColor;
+
+a, a:hover {
+    color: @HeaderLinkColor;
+    text-decoration: none;
+    }
+}
+
+.rm-desktop {
+    li {
+
+        a {
+            color: @textColor2;
+            background-color: @bgNavbarColor;
+
+            &:hover {
+                color: @navbarHoverColor;
+                background-color: @bgNavbarHoverColor;
+            }
+        }
+    }
+    li.selected, li.selected-parent {
+        a, a:hover {
+            color: @navbarActiveColor;
+            background-color: @bgNavbarActiveColor;
+        }
+    }
+}
+
+@maxBgColor: @bgNavbarColor;
+
+.rm-mobile a {
+    color: @textColor2;
+}
+
+/** --------------------------------------------------------------
+ *  Breadcrumb
+ */
+.breadcrumb-wrap {
+    color: @breadcrumbColor;
+    background-color: @bgBreadcrumbColor;
+}
+
+/** --------------------------------------------------------------
+ *  Footer
+ */
+.inner-wrap-footer {
+    background-color: @bgFooterColor;
+}
+
+.outer-wrap-footer a{
+    color: @textColor2;
+}
