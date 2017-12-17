@@ -1,0 +1,69 @@
+@import url(default.less);
+
+/** --------------------------------------------------------------
+ *  Färger
+ */
+@shadowColor: #000;
+
+/** --------------------------------------------------------------
+ *  Allmäna css regler
+ */
+.inner-wrap {
+    box-shadow: 0 3px 4px 1px @shadowColor;
+}
+
+h1 {
+    text-shadow: 2px 2px 3px @shadowColor;
+}
+
+img {
+    box-shadow: 1px 1px 8px @shadowColor;
+}
+
+.route-blogg .sidebar-right {
+    h4 {
+        text-shadow: 2px 2px 3px @shadowColor;
+    }
+}
+
+.route-analysis .sidebar-left {
+    h4 {
+        text-shadow: 2px 2px 3px @shadowColor;
+    }
+}
+
+.route-report .sidebar-left {
+    h4 {
+        text-shadow: 2px 2px 3px @shadowColor;
+    }
+}
+
+/** --------------------------------------------------------------
+ *  Header
+ */
+.site-logo-text {
+    text-shadow: 2px 2px 3px @shadowColor;
+}
+
+.rm-desktop {
+    li {
+        a {
+            &:hover {
+                box-shadow: 1px 1px 3px @shadowColor;
+            }
+        }
+    }
+    li.selected, li.selected-parent {
+        a, a:hover {
+            box-shadow: 1px 1px 3px @shadowColor;
+        }
+    }
+}
+
+/** --------------------------------------------------------------
+ *  Byline
+ */
+.byline {
+    border-width: thin;
+    box-shadow: 0 3px 4px 1px @shadowColor;
+}

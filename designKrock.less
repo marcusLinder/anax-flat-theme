@@ -1,0 +1,103 @@
+@import url(light.less);
+
+/** --------------------------------------------------------------
+ *  Färger
+ */
+@shadowColor: #000;
+@bgColorHeaderOpacity: rgba(0, 255, 0, 0.5);
+@bgColorFooterOpacity: rgba(255, 0, 0, 0.5);
+@bgColorBreadcrumbOpacity: rgba(0, 0, 255, 0.5);
+
+/** --------------------------------------------------------------
+ *  Allmäna css regler
+ */
+.outer-wrap {
+    background: url('../img/marble.png');
+}
+
+.inner-wrap {
+    box-shadow: 0 3px 4px 1px @shadowColor;
+}
+
+.inner-wrap-main {
+    box-shadow: 0 3px 4px 1px @shadowColor;
+    background: url('../img/vintage-concrete.png');
+}
+
+h1 {
+    text-shadow: 2px 2px 3px @shadowColor;
+}
+
+img {
+    box-shadow: 1px 1px 8px @shadowColor;
+}
+
+.route-blogg .sidebar-right {
+    h4 {
+        text-shadow: 2px 2px 3px @shadowColor;
+    }
+}
+
+.route-analysis .sidebar-left {
+    h4 {
+        text-shadow: 2px 2px 3px @shadowColor;
+    }
+}
+
+.route-report .sidebar-left {
+    h4 {
+        text-shadow: 2px 2px 3px @shadowColor;
+    }
+}
+
+.route-grid .inner-wrap {
+    background-color: transparent;
+}
+
+/** --------------------------------------------------------------
+ *  Header
+ */
+.site-header {
+    background-color: @bgColorHeaderOpacity;
+}
+
+.site-logo-text {
+    text-shadow: 2px 2px 3px @shadowColor;
+}
+
+.rm-desktop {
+    li {
+        a {
+            &:hover {
+                box-shadow: 1px 1px 3px @shadowColor;
+            }
+        }
+    }
+    li.selected, li.selected-parent {
+        a, a:hover {
+            box-shadow: 1px 1px 3px @shadowColor;
+        }
+    }
+}
+
+/** --------------------------------------------------------------
+ *  Byline
+ */
+.byline {
+    border-width: thin;
+    box-shadow: 0 3px 4px 1px @shadowColor;
+}
+
+/** --------------------------------------------------------------
+ *  Breadcrumb
+ */
+.breadcrumb-wrap {
+    background-color: @bgColorBreadcrumbOpacity;
+}
+
+/** --------------------------------------------------------------
+ *  Footer
+ */
+.inner-wrap-footer {
+    background-color: @bgColorFooterOpacity;
+}

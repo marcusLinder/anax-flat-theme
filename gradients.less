@@ -1,0 +1,85 @@
+@import url(light.less);
+
+/** --------------------------------------------------------------
+ *  Färger
+ */
+@textColor: #000;
+@menuBgColor: #FAFAFA;
+@menuGradientColor: #b8b894;
+@selectedBgColor: #fff;
+@mainBgColor: #999966;
+@mainGradientColor: #fff;
+/** --------------------------------------------------------------
+ *  Allmän CSS
+ */
+.inner-wrap {
+    max-width: 100%;
+}
+
+.inner-wrap-main, .inner-wrap-after-main {
+    background: linear-gradient(to right,@mainBgColor,@mainGradientColor 25%,@mainGradientColor 75%,@mainBgColor);
+    padding: 15px;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, ul, tr, td {
+    color: @textColor;
+}
+
+/** --------------------------------------------------------------
+ *  Header
+ */
+.site-header {
+    background: linear-gradient(@menuBgColor, @menuGradientColor);
+}
+
+.rm-desktop {
+    li {
+
+        a {
+            color: @textColor;
+            background: linear-gradient(@menuBgColor, @menuGradientColor);
+
+            &:hover {
+                color: @navbarHoverColor;
+                background: linear-gradient(@menuGradientColor, @selectedBgColor);
+            }
+        }
+    }
+    li.selected, li.selected-parent {
+        a, a:hover {
+            color: @navbarActiveColor;
+            background: linear-gradient(@menuGradientColor, @selectedBgColor);
+        }
+    }
+}
+
+.rm-max .rm-mobile.rm-clicked{
+    background: linear-gradient(@menuBgColor, @menuGradientColor);
+}
+
+/** --------------------------------------------------------------
+ *  Flash
+ */
+ .flash-wrap {
+     max-width: 100%;
+     text-align: center;
+     background: linear-gradient(to right,@mainBgColor,@mainGradientColor 25%,@mainGradientColor 75%,@mainBgColor);
+ }
+
+/** --------------------------------------------------------------
+ *  Breadcrumb
+ */
+.breadcrumb-wrap {
+    background: linear-gradient(@menuBgColor, @menuGradientColor);
+}
+
+/** --------------------------------------------------------------
+ *  Footer
+ */
+.inner-wrap-footer {
+    background: linear-gradient(@menuBgColor, @menuGradientColor);
+}
+
+.outer-wrap-footer a {
+    color: @textColor;
+}

@@ -1,0 +1,112 @@
+@import url(light.less);
+
+@borderColor: #F49401;
+@bgColor: #FAFAFA;
+
+@fontSizeBreadcrumb: 14px;
+
+/** --------------------------------------------------------------
+ *  Allmän CSS
+ */
+.outer-wrap {
+    background: url('../img/vintage-concrete.png');
+}
+
+.inner-wrap {
+    background-color: @bgColor;
+    padding: 10px;
+}
+
+.route-grid .inner-wrap {
+    background-color: transparent;
+}
+
+.byline {
+    border-width: thin;
+    border-color: @borderColor;
+    }
+
+h1{
+    position: relative;
+}
+h1::after {
+    content: url(../image/stamp.png?w=90);
+    position: absolute;
+    top: .1em;
+    right: 6em;
+    display: block;
+}
+
+/** --------------------------------------------------------------
+ *  Header
+ */
+.site-header {
+    background: url('../img/marble.png');
+    border: solid;
+    border-width: thin;
+}
+
+/** --------------------------------------------------------------
+ *  Breadcrumb
+ */
+ .breadcrumb-wrap {
+     background: url('../img/marble.png');
+     //margin-bottom: @magicNumber;
+     border: solid;
+     border-width: thin;
+ }
+
+ .breadcrumb-list ul {
+     font-size: @fontSizeBreadcrumb;
+     font-family: @fontFamilyBody;
+     li{
+         display: inline-block;
+         &::after {
+             content: " ›";
+         }
+         &:last-child::after {
+             display: none;
+         }
+     }
+ }
+
+/** --------------------------------------------------------------
+ *  Sidebar
+ */
+.main.has-sidebar-right {
+    border-right: solid;
+    border-width: thin;
+    border-color: @borderColor;
+    padding: 10px;
+}
+
+.main.has-sidebar-left {
+    border-left: solid;
+    border-width: thin;
+    border-color: @borderColor;
+    padding: 10px;
+}
+
+/** --------------------------------------------------------------
+ *  Footer
+ */
+.outer-wrap-footer {
+    .site-footer {
+        border-top: solid;
+        border-width: thin;
+        border-color: @borderColor;
+        margin-top: @magicNumber / 2;
+    }
+    .footer-column {
+        border-right: solid;
+        border-width: thin;
+        border-color: @borderColor
+    }
+    .footer-column:last-of-type {
+        border-right: none;
+    }
+}
+
+.inner-wrap-footer {
+    background: url('../img/marble.png');
+}

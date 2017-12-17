@@ -1,0 +1,103 @@
+@import url(light.less);
+
+/** --------------------------------------------------------------
+ *  Färger
+ */
+@frameColor: #FAFAFA;
+@gradientColor: #b8b894;
+
+/** --------------------------------------------------------------
+ *  Allmäna css regler
+ */
+.row {
+    border-left: solid;
+    border-right: solid;
+    border-width: thin;
+}
+
+.row::after {
+    border-left: solid;
+    border-right: solid;
+    border-width: thin;
+    width: @magicNumber;
+}
+
+/** --------------------------------------------------------------
+ *  Header/flash
+ */
+.site-header {
+    border-left: solid;
+    border-right: solid;
+    border-width: thin;
+}
+
+.flash-wrap {
+   border-left: solid;
+   border-right: solid;
+   border-bottom: solid;
+   border-width: thin;
+   margin-bottom: @magicNumber;
+   height: 236px;
+}
+
+/** --------------------------------------------------------------
+ *  Sidebar
+ */
+.sidebar-left {
+    border: solid;
+    border-width: thin;
+    border-radius: 25px;
+    background: @frameColor;
+    background: linear-gradient(@frameColor, @gradientColor);
+    width: 20%;
+    margin-left: @magicNumber;
+    margin-top: @magicNumber;
+    padding-bottom: 30px;
+    ul {
+        width: 50%;
+        margin:auto;
+    }
+    h4 {
+        text-align: center;
+    }
+}
+
+.sidebar-right {
+    border: solid;
+    border-width: thin;
+    border-radius: 25px;
+    background: @frameColor;
+    background: linear-gradient(@frameColor, @gradientColor);
+    width: 20%;
+    margin-left: @magicNumber * 2;
+    margin-top: @magicNumber * 2;
+    padding-bottom: 30px;
+    ul {
+        width: 50%;
+        margin:auto;
+    }
+    h4 {
+        text-align: center;
+    }
+}
+
+/** --------------------------------------------------------------
+ *  Breadcrumb
+ */
+.breadcrumb-wrap {
+    border: solid;
+    border-width: thin;
+    border-radius: 25px;
+    background-color: @frameColor;
+    margin-bottom: @magicNumber;
+}
+
+ /** --------------------------------------------------------------
+  *  Footer
+  */
+.inner-wrap-footer {
+    border: solid;
+    border-width: thin;
+    margin-top: @magicNumber;
+    margin-bottom: @magicNumber;
+}

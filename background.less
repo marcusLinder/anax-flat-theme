@@ -1,0 +1,53 @@
+@import url(default.less);
+
+/** --------------------------------------------------------------
+ *  Färger
+ */
+@bgColorOpacity: rgba(250, 250, 250, 0.8);
+@FooterBgColorOpacity: rgba(204, 204, 179, 0.8);
+@bgNavbarMaxColor: #000;
+
+/** --------------------------------------------------------------
+ *  Allmän CSS
+ */
+.wrap-all {
+    background-image: url(../img/badhytter2.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.outer-wrap {
+    background: none;
+}
+
+.inner-wrap-main {
+    background-color: @bgColorOpacity;
+}
+
+.inner-wrap-after-main {
+    background-color: @bgColorOpacity;
+}
+
+/** --------------------------------------------------------------
+ *  Header
+ */
+ .inner-wrap-header {
+     opacity: 0.8;
+ }
+
+@maxButtonColor: @bgNavbarMaxColor;
+
+/** --------------------------------------------------------------
+ *  Breadcrumb
+ */
+.inner-wrap-breadcrumb {
+    opacity: 0.8;
+}
+
+/** --------------------------------------------------------------
+ *  Footer
+ */
+.inner-wrap-footer {
+    background-color: @FooterBgColorOpacity;
+}
